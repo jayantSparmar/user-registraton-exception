@@ -27,7 +27,30 @@ public class UserRegistrationTest {
      */
     public void testFirstNameInvalidMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isFirstnameValid = userRegistration.checkFName("Jayant");
+        boolean isFirstnameValid = userRegistration.checkFirstName("Jayant");
         Assertions.assertFalse(isFirstnameValid);
     }
+    /**
+     * created method testingLastName() to check lastname is valid or not
+     */
+    @Test
+    public void testLastNameValidMustReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        /**
+         * calling Lastname method to see LastName is valid
+         */
+        boolean isLastnameValid = userRegistration.Lastname("Parmar");
+        Assertions.assertTrue(isLastnameValid);
+    }
+
+    /**
+     * created method testLastNameInvalidMustReturnFalse for false condition
+     */
+    @Test
+    public void testLastNameValidMustReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean isLastnameINValid = userRegistration.Lastname("advani");
+        Assertions.assertFalse(isLastnameINValid);
+    }
 }
+
