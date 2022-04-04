@@ -52,5 +52,28 @@ public class UserRegistrationTest {
         boolean isLastnameINValid = userRegistration.Lastname("advani");
         Assertions.assertFalse(isLastnameINValid);
     }
+    @Test
+    /**
+     * created method testEmailId_MustReturnTrue() for true condition
+     */
+    public void testEmailId_MustReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        /**
+         * calling checkEmail method to see mailId is valid
+         */
+        boolean isEmailValid = userRegistration.checkEmail("jayantparmar420@gmail.com");
+        Assertions.assertTrue(isEmailValid);
+    }
+
+    @Test
+    /**
+     * created method testEmailId_MustReturnFalse() for false condition
+     */
+
+    public void testEmailId_MustReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean isEmailInvalid = userRegistration.checkEmail("jayant@.com");
+        Assertions.assertFalse(isEmailInvalid);
+    }
 }
 
