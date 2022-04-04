@@ -98,6 +98,8 @@ public class UserRegistrationTest {
         boolean isPhoneNumberInValid = userRegistration.checkPhoneNum("7566033032");
         Assertions.assertFalse(isPhoneNumberInValid);
     }
+
+
     @Test
     /**
      * created testPassword_MustReturnTrue() for True condition
@@ -107,7 +109,7 @@ public class UserRegistrationTest {
         /**
          * calling checkPassword method to see Password is valid
          */
-        boolean isPasswordValid = userRegistration.checkPassword("abcdefghi");
+        boolean isPasswordValid = userRegistration.checkPassword("Abc@123gjyg");
         Assertions.assertTrue(isPasswordValid);
     }
 
@@ -117,7 +119,7 @@ public class UserRegistrationTest {
      */
     public void testPassword_MustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isPasswordInValid = userRegistration.checkPassword("abcd");
+        boolean isPasswordInValid = userRegistration.checkPassword("abcdefghi");
         Assertions.assertFalse(isPasswordInValid);
     }
 }
